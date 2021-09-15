@@ -1,0 +1,135 @@
+﻿@section Scripts {
+    @Scripts.Render("~/Scripts/HRPlatformScript.js")
+    @Scripts.Render("~/Scripts/Validator.js")
+}
+
+<br />
+<div class="row">
+    <div class="col-sm-2">
+        <form method="post" action="post/" id="filterForm">
+            <h3>Search candidates by:</h3>
+            <p>
+                <label class="form-label">Name</label>
+                <input type="text" id="candNameSearch" />
+            </p>
+            <p>
+                <label class="form-label">Skills</label>
+                <input type="text" id="candSkillsSearch" />
+            </p>
+            <button type="submit" class="btn btn-default" style="background-color:palegreen">Search</button>
+            <button type="button" id="searchReset" class="btn btn-default" style="background-color:palevioletred">Reset</button>
+        </form>
+    </div>
+    <div class="col-sm-8" id="dataCandidates">
+    </div>
+    <div class="col-sm-2">
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-sm-3">
+    </div>
+    <div id="formDivCand" class="col-sm-6">
+        <h4>Add new candidate</h4>
+
+        <form method="post" action="post/" id="addCandForm">
+
+            <div class="row">
+                <p>
+                    <div class="col-sm-3"></div>
+                    <label class="col-sm-6 form-label"> Name: </label>
+                    <input class="col-sm-3" id="candName">
+                </p>
+            </div>
+
+            <div class="row">
+                <label class="col-sm-offset-9 col-sm-3 text-danger" id="candNameError"></label>
+            </div>
+
+            <div class="row">
+                <p>
+                    <div class="col-sm-3"></div>
+                    <label class="col-sm-6 form-label">Date of birth:</label>
+                    <input class="col-sm-3" id="candDateOfBirth">
+                </p>
+            </div>
+
+            <div class="row">
+                <p>
+                    <div class="col-sm-3"></div>
+                    <label class="col-sm-6 form-label">Contect number:</label>
+                    <input class="col-sm-3" id="candContactNumber">
+                </p>
+            </div>
+
+            <div class="row">
+                <p>
+                    <div class="col-sm-3"></div>
+                    <label class="col-sm-6 form-label">Email:</label>
+                    <input class="col-sm-3" id="candEmail">
+                </p>
+            </div>
+
+            <div class="row">
+                <p>
+                    <div class="col-sm-3"></div>
+                    <label class="col-sm-6 form-label">Skills: </label>
+                    <ol class="col-sm-3" id="candidateSkills"> </ol>
+                </p>
+            </div>
+
+            <br />
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <button type="submit" class="btn btn-default col-sm-4" style="background-color:palegreen">Add</button>
+                <div class="col-sm-1"></div>
+                <p><button type="button" class="btn btn-default col-sm-4" style="background-color:palevioletred" id="candformClear">Clear</button></p>
+            </div>
+        </form>
+    </div>
+    <div class="col-sm-3"></div>
+</div>
+
+<hr />
+
+<div class="row">
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-8" id="dataSkills">
+    </div>
+    <div class="col-sm-2">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-3"></div>
+    <div id="formDivSkill" class="col-sm-6">
+        <h4>Add new skill</h4>
+        <form method="post" action="post/" id="addSkillForm">
+            <div class="row">
+                <p>
+                    <div class="col-sm-3"></div>
+                    <label class="col-sm-6 form-label"> Name: </label>
+                    <input class="col-sm-3" id="skillName">
+                </p>
+            </div>
+
+            <div class="row">
+                <label class="col-sm-offset-9 col-sm-3 text-danger" id="skillNameError"></label>
+            </div>
+
+            <br />
+
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <button type="submit" class="btn btn-default col-sm-4" style="background-color:palegreen">Add</button>
+                <div class="col-sm-1"></div>
+                <p><button type="button" class="btn btn-default col-sm-4" style="background-color:palevioletred" id="skillformClear">Clear</button></p>
+            </div>
+        </form>
+    </div>
+    <div class="col-sm-3"></div>
+</div>
+
+<hr />
